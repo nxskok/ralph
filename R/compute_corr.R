@@ -14,7 +14,6 @@
 #' @examples
 #' compute_corr(mtcars, mpg, wt)
 compute_corr <- function(data, var1, var2){
-
   # compute correlation ----
   cor.test(
     x = data %>% pull({{var1}}),
@@ -26,6 +25,9 @@ compute_corr <- function(data, var1, var2){
   select(
     correlation = estimate,
     pval = p.value
-  )
+  ) -> results
 
+  attr(results$correlation, "names") <- NULL
+
+  return(results)
 }
