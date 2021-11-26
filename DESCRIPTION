@@ -15,3 +15,5 @@ Imports:
     dplyr,
     magrittr,
     stats
+URL: https://github.com/nxskok/ralph
+BugReports: https://github.com/nxskok/ralph/issues
